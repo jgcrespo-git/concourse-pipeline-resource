@@ -5,7 +5,8 @@ ENV CGO_ENABLED 0
 
 RUN mkdir -p /assets/ /app/
 
-ADD fly/fly-*-linux-amd64.tgz /assets/
+# ADD fly/fly-*-linux-amd64.tgz /assets/
+ADD fly/fly /assets/
 
 COPY concourse-pipeline-resource/go.mod concourse-pipeline-resource/go.sum /app/
 
